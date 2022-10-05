@@ -43,7 +43,7 @@ async  def on_ready():
     print("Le bot est prêt")
     print("---------------")
 
-testServerID = 1022533622600826971
+testServerID = 
 
 @client.slash_command(name= "restart", description="Recommencer la partie", guild_ids=[testServerID])
 async def restard(interaction: Interaction):
@@ -129,6 +129,6 @@ async def receiveBank(
 
 
 
-client.run("MTAyMjUzMDc3NjcwNjg2MzIzNA.GPOPnX.XzeInRMQzra1kCTA93ijEbGYgoKyEOqhF0ugJ8")
+client.run(TOKEN)
 
 

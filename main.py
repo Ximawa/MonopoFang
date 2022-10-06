@@ -43,7 +43,7 @@ playerList = []
 intents = nextcord.Intents.all()
 intents.members = True
 
-client = commands.Bot(command_prefix='!', intents=intents)
+client = commands.Bot(command_prefix='/', intents=intents)
 
 @client.event
 async  def on_ready():
@@ -54,27 +54,6 @@ async  def on_ready():
 @client.slash_command(name= "restart", description="Recommencer la partie", guild_ids=[serverID])
 async def restard(interaction: Interaction):
     playerList.clear() 
-    houseList = [
-    {'Name' : "Kanojedo",'Value' : 120 },
-    {'Name' : "Temple des justiciers",'Value' : 120 },
-    {'Name' : "Village de pandala",'Value' : 150 },
-    {'Name' : "Ile de Grobe",'Value' : 160 },
-    {'Name' : "Dune des ossements ",'Value' : 160 },
-    {'Name' : "La Pyramide",'Value' : 190 },
-    {'Name' : "Ilot des tombeaux",'Value' : 200 },
-    {'Name' : "Ilot de la couronne",'Value' : 200 },
-    {'Name' : "Peninsule des gelées ",'Value' : 230 },
-    {'Name' : "Les Abysses",'Value' : 240 },
-    {'Name' : "La bourgade",'Value' : 240 },
-    {'Name' : "Désolation de sidimote",'Value' : 270 },
-    {'Name' : "Terres désacrées",'Value' : 270 },
-    {'Name' : "Coeur immaculé",'Value' : 270 },
-    {'Name' : "Promontoire des cieux",'Value' : 270 },
-    {'Name' : "Zaap Cité d'Astrub",'Value' : 270 },
-    {'Name' : "Zaap du Village de la canopée",'Value' : 270 },
-    {'Name' : "Zaap du Port de Madrestam",'Value' : 270 },
-    {'Name' : "Zaap du Temple des alliances",'Value' : 270 },
-    ]
     await interaction.response.send_message("Partie recommencer")
 
 @client.slash_command(name= "carteschance", description="Pioche une carte chance.", guild_ids=[serverID])
